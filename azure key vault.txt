@@ -1,0 +1,7 @@
+resource "azurerm_key_vault" "example" {
+  name                        = "examplekv" # must be globally unique
+  location                    = azurerm_resource_group.example.location
+  resource_group_name         = azurerm_resource_group.example.name
+  tenant_id                   = "YOUR_TENANT_ID"
+  sku_name                    = "standard"
+}
